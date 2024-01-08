@@ -1,0 +1,9 @@
+<div class="timer">
+  <h2><i class="fa-regular fa-hourglass"></i> Timer</h2>
+  <div class="time">{{ minutes| number: '2.0-5' }}:{{ seconds | number: '2.0-0' }}</div>
+  <div class="controls">
+    <button (click)="startTimer()" [disabled]="isTimerRunning"><i class="fas fa-play"></i></button>
+    <button (click)="stopTimer()" [disabled]="!isTimerRunning"><i class="fas fa-pause"></i></button>
+    <button (click)="resetTimer()"><i class="fas fa-redo"></i></button>
+  </div>
+</div>
